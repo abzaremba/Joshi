@@ -42,7 +42,7 @@ double SimpleMontecarlo1(double Expiry,
 }
 
 
-int main ()
+int main_OLD ()
 {
 	double Expiry;
 	double Strike1;
@@ -51,20 +51,26 @@ int main ()
 	double Vol;
 	double r;
 	unsigned long NumberOfPaths;
-	cout << "\nEnter expiry \n";
-	cin >> Expiry;
-	cout << "\nEnter strike 1 \n";
-	cin >> Strike1;
-	cout << "\nEnter strike 2 \n";
-	cin >> Strike2;
-	cout << "\nEnter spot \n";
-	cin >> Spot;
-	cout << "\nEnter vol \n";
-	cin >> Vol;
-	cout << "\nEnter r \n";
-	cin >> r;
-	cout << "\nEnter number of paths \n";
-	cin >> NumberOfPaths;
+	//cout << "\nEnter expiry \n";
+	//cin >> Expiry;
+	//cout << "\nEnter strike 1 \n";
+	//cin >> Strike1;
+	//cout << "\nEnter strike 2 \n";
+	//cin >> Strike2;
+	//cout << "\nEnter spot \n";
+	//cin >> Spot;
+	//cout << "\nEnter vol \n";
+	//cin >> Vol;
+	//cout << "\nEnter r \n";
+	//cin >> r;
+	//cout << "\nEnter number of paths \n";
+	//cin >> NumberOfPaths;
+
+
+	cout << "\nEnter all of the arguments in the following order: expiry, strike1, strike2, spot, vol, r, number of paths. \n";
+	cin >> Expiry >> Strike1 >> Strike2 >> Spot >> Vol >> r >> NumberOfPaths;
+
+
 
 	double result = SimpleMontecarlo1(Expiry,
 									  Strike1,

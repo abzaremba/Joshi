@@ -21,9 +21,24 @@
     <ClCompile Include="Random1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Payoff1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleMC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleMCMain2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Random1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Payoff1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleMC.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
