@@ -6,7 +6,8 @@
 using namespace std;
 
 double SimpleMontecarlo1(double Expiry, 
-						 double Strike,
+						 double Strike1,
+						 double Strike2,
 						 double Spot,
 						 double Vol,
 						 double r,
@@ -26,8 +27,12 @@ double SimpleMontecarlo1(double Expiry,
 		thisSpot = movedSpot*exp(rootVariance*thisGaussian);
 		// double thisPayoff = thisSpot - Strike;
 		// payoff for put option
-		oduble thisPayoff = Strike - thisSpot;
-		thisPayoff =thisPayoff >0 ? thisPayoff : 0;
+		// double thisPayoff = Strike - thisSpot;
+		//thisPayoff =thisPayoff >0 ? thisPayoff : 0;
+		// this payoff is for double digitals
+		double thisPayoff = Strike2 - thisSpot > 0 ? 1 : 0;
+		thisPayoff = thisSpot - Strike1 >0 ? thisPayoff : 0;
+		
 		runningSum += thisPayoff;
 	}
 
@@ -40,15 +45,18 @@ double SimpleMontecarlo1(double Expiry,
 int main ()
 {
 	double Expiry;
-	double Strike;
+	double Strike1;
+	double Strike2;
 	double Spot;
 	double Vol;
 	double r;
 	unsigned long NumberOfPaths;
 	cout << "\nEnter expiry \n";
 	cin >> Expiry;
-	cout << "\nEnter strike \n";
-	cin >> Strike;
+	cout << "\nEnter strike 1 \n";
+	cin >> Strike1;
+	cout << "\nEnter strike 2 \n";
+	cin >> Strike2;
 	cout << "\nEnter spot \n";
 	cin >> Spot;
 	cout << "\nEnter vol \n";
@@ -59,7 +67,8 @@ int main ()
 	cin >> NumberOfPaths;
 
 	double result = SimpleMontecarlo1(Expiry,
-									  Strike,
+									  Strike1,
+									  Strike2,
 									  Spot,
 									  Vol,
 									  r,
