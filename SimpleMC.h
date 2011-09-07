@@ -3,7 +3,10 @@
 
 #include "Payoff1.h"
 
-double SimpleMonteCarlo2(const Payoff& thePayoff,
+// ...ok, had to change the name of the monte carlo function in SimpleMC 
+// from SimpleMonteCarlo2 to SimpleMonteCarlo1, so that it's not defined in SimpleMC and SimpleMC2 in the same way...
+
+double SimpleMonteCarlo(const Payoff& thePayoff,
 						 double Expiry,
 						 double Spot,
 						 double Vol,

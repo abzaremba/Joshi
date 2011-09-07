@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int main()
+int main_OLD2()
 {
 	double Expiry;
 	double Strike;
@@ -48,28 +48,28 @@ int main()
 	DoubleBarrierPayoff inDigitalPayoff(BarrierLower, BarrierUpper, DoubleBarrierPayoff::inside);
 	DoubleBarrierPayoff outDigitalPayoff(BarrierLower, BarrierUpper, DoubleBarrierPayoff::outside);
 
-	double resultCall = SimpleMonteCarlo2(callPayoff,
+	double resultCall = SimpleMonteCarlo(callPayoff,
 										  Expiry,
 										  Spot,
 										  Vol,
 										  r,
 										  NumberOfPaths);
 
-	double resultPut = SimpleMonteCarlo2(putPayoff,
+	double resultPut = SimpleMonteCarlo(putPayoff,
 										 Expiry,
 										 Spot,
 										 Vol,
 										 r,
 										 NumberOfPaths);
 
-	double resultInDoubleDigital = SimpleMonteCarlo2(inDigitalPayoff,
+	double resultInDoubleDigital = SimpleMonteCarlo(inDigitalPayoff,
 										 Expiry,
 										 Spot,
 										 Vol,
 										 r,
 										 NumberOfPaths);
 
-	double resultOutDoubleDigital = SimpleMonteCarlo2(outDigitalPayoff,
+	double resultOutDoubleDigital = SimpleMonteCarlo(outDigitalPayoff,
 										 Expiry,
 										 Spot,
 										 Vol,

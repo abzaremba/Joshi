@@ -9,7 +9,7 @@ using namespace std;
 #endif
 
 
-double SimpleMonteCarlo2(const Payoff& thePayoff,
+double SimpleMonteCarlo(const Payoff& thePayoff,
 						 double Expiry,
 						 double Spot,
 						 double Vol,
