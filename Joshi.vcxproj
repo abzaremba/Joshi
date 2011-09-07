@@ -63,6 +63,7 @@
     <ClCompile Include="DoubleDigital.cpp" />
     <ClCompile Include="Payoff2.cpp" />
     <ClCompile Include="Payoff1.cpp" />
+    <ClCompile Include="PowerOption.cpp" />
     <ClCompile Include="Random1.cpp" />
     <ClCompile Include="SimpleMC.cpp" />
     <ClCompile Include="SimpleMC2.cpp" />
@@ -76,6 +77,7 @@
     <ClInclude Include="DoubleDigital.h" />
     <ClInclude Include="Payoff1.h" />
     <ClInclude Include="Payoff2.h" />
+    <ClInclude Include="PowerOption.h" />
     <ClInclude Include="Random1.h" />
     <ClInclude Include="SimpleMC.h" />
     <ClInclude Include="SimpleMC2.h" />
