@@ -1,17 +1,19 @@
-/*  requires Payoff2.cpp
-			 Random1.cpp
-			 SimpleMC2.cpp */
+/* requires DoubleDigital.cpp
+			Payoff2.cpp
+			Random1.cpp
+			SimplreMC2.cpp */
 
 #include "SimpleMC2.h"
+#include "DoubleDigital.h"
 #include <iostream>
 
 using namespace std;
 
-
-int main_OLD4()
+int main()
 {
+
 	double Expiry;
-	double Strike;
+	double Low, Up;
 	double Spot;
 	double Vol;
 	double r;
@@ -19,8 +21,8 @@ int main_OLD4()
 
 	cout << "\nEnter expiry\n";
 	cin >> Expiry;
-	cout << "\nEnter strike\n";
-	cin >> Strike;
+	cout << "\nEnter low barrier and up barrier\n";
+	cin >> Low >> Up;
 	cout << "\nEnter spot\n";
 	cin >> Spot;
 	cout << "\nEnter vol\n";
@@ -30,30 +32,19 @@ int main_OLD4()
 	cout << "\nEnter number of paths\n";
 	cin >> NumberOfPaths;
 
-	unsigned long optionType;
+	PayoffDoubleDigital thePayoff(Low, Up);
 
-	cout << "\nenter 0 for call, otherwise put ";
-	cin >> optionType;
-
-	Payoff* thePayoffPointer;
-
-	if (optionType == 0)
-		thePayoffPointer = new PayoffCall(Strike);
-	else
-		thePayoffPointer = new PayoffPut(Strike);
-
-	double result = SimpleMonteCarlo2(*thePayoffPointer,
+	double result = SimpleMonteCarlo2(thePayoff,
 									  Expiry,
 									  Spot,
 									  Vol,
 									  r,
 									  NumberOfPaths);
 
-	cout << "\nthe price is: " << result << endl;
+	cout << "\nthe price of the option is: " << result << "\n";
 
 	double tmp;
 	cin >> tmp;
 
 	return 0;
-
 }

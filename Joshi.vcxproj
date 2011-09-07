@@ -60,6 +60,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DoubleDigital.cpp" />
     <ClCompile Include="Payoff2.cpp" />
     <ClCompile Include="Payoff1.cpp" />
     <ClCompile Include="Random1.cpp" />
@@ -69,8 +70,10 @@
     <ClCompile Include="SimpleMCMain2.cpp" />
     <ClCompile Include="SimpleMCMain3.cpp" />
     <ClCompile Include="SimpleMCMain4.cpp" />
+    <ClCompile Include="SimpleMCMain5.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DoubleDigital.h" />
     <ClInclude Include="Payoff1.h" />
     <ClInclude Include="Payoff2.h" />
     <ClInclude Include="Random1.h" />
