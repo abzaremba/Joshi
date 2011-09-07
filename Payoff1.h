@@ -30,7 +30,7 @@ private:
 class DoubleBarrierPayoff : public Payoff
 {
 public:
-	enum OptionType {in, out};
+	enum OptionType {inside, outside};
 	DoubleBarrierPayoff(double BarrierLower_, double BarrierUpper_, OptionType TheOptionsType_);
 	double operator()(double Spot) const;
 

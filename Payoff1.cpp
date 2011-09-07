@@ -33,11 +33,11 @@ double DoubleBarrierPayoff::operator()(double spot) const
 {
 	switch (TheOptionsType)
 	{
-	case in:
-		return (BarrierUpper_ > spot && spot > BarrierLower_) ? 1 : 0;
+	case inside:
+		return (BarrierUpper > spot && spot > BarrierLower) ? 1 : 0;
 
-	case out:
-		return (BarrierUpper_ < spot || spot < BarrierLower_) ? 1 : 0;
+	case outside:
+		return (BarrierUpper < spot || spot < BarrierLower) ? 1 : 0;
 
 	default:
 		throw("Unknown option type found.");

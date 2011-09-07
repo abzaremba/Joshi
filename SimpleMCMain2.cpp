@@ -12,6 +12,8 @@ int main()
 {
 	double Expiry;
 	double Strike;
+	double BarrierLower;
+	double BarrierUpper;
 	double Spot;
 	double Vol;
 	double r;
@@ -22,6 +24,12 @@ int main()
 
 	cout << "\nEnter strike\n";
 	cin >> Strike;
+
+	cout << "\nEnter lower barrier for double digital\n";
+	cin >> BarrierLower;
+
+	cout << "\nEnter upper barrier for double digital\n";
+	cin >> BarrierUpper;
 
 	cout << "\nEnter spot\n";
 	cin >> Spot;
@@ -35,9 +43,10 @@ int main()
 	cout << "\nEnter number of paths\n";
 	cin >> NumberOfPaths;
 
-	Payoff callPayoff(Strike, Payoff::call);
-	Payoff putPayoff(Strike, Payoff::put);
-	Payoff callDigitalPayoff(Strike, Payoff::digital_call);
+	VanillaPayoff callPayoff(Strike, VanillaPayoff::call);
+	VanillaPayoff putPayoff(Strike, VanillaPayoff::put);
+	DoubleBarrierPayoff inDigitalPayoff(BarrierLower, BarrierUpper, DoubleBarrierPayoff::inside);
+	DoubleBarrierPayoff outDigitalPayoff(BarrierLower, BarrierUpper, DoubleBarrierPayoff::outside);
 
 	double resultCall = SimpleMonteCarlo2(callPayoff,
 										  Expiry,
@@ -53,20 +62,29 @@ int main()
 										 r,
 										 NumberOfPaths);
 
-	double resultCallDigital = SimpleMonteCarlo2(callDigitalPayoff,
+	double resultInDoubleDigital = SimpleMonteCarlo2(inDigitalPayoff,
 										 Expiry,
 										 Spot,
 										 Vol,
 										 r,
 										 NumberOfPaths);
 
+	double resultOutDoubleDigital = SimpleMonteCarlo2(outDigitalPayoff,
+										 Expiry,
+										 Spot,
+										 Vol,
+										 r,
+										 NumberOfPaths);
 
 	cout << "the prices are: " << resultCall
 							   << " for the call and "
 							   << resultPut
-							   << " for the put\n"
-							   << resultCallDigital
-							   << " for the digital call\n";
+							   << " for the put.\n"
+							   << resultInDoubleDigital
+							   << " for the digital in "
+							   << resultOutDoubleDigital
+							   << " for the digital out\n";
+
 	double tmp;
 	cin >> tmp;
 	return 0;
