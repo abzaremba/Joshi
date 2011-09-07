@@ -68,6 +68,7 @@
     <ClCompile Include="SimpleMCMain.cpp" />
     <ClCompile Include="SimpleMCMain2.cpp" />
     <ClCompile Include="SimpleMCMain3.cpp" />
+    <ClCompile Include="SimpleMCMain4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Payoff1.h" />

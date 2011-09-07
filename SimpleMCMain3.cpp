@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int main_OLD3()
 {
 	double Expiry;
 	double Strike;
