@@ -61,26 +61,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DoubleDigital.cpp" />
-    <ClCompile Include="Payoff2.cpp" />
-    <ClCompile Include="Payoff1.cpp" />
+    <ClCompile Include="Payoff3.cpp" />
     <ClCompile Include="PowerOption.cpp" />
     <ClCompile Include="Random1.cpp" />
-    <ClCompile Include="SimpleMC.cpp" />
-    <ClCompile Include="SimpleMC2.cpp" />
-    <ClCompile Include="SimpleMCMain.cpp" />
-    <ClCompile Include="SimpleMCMain2.cpp" />
-    <ClCompile Include="SimpleMCMain3.cpp" />
-    <ClCompile Include="SimpleMCMain4.cpp" />
-    <ClCompile Include="SimpleMCMain5.cpp" />
+    <ClCompile Include="SimpleMC4.cpp" />
+    <ClCompile Include="Vanilla2.cpp" />
+    <ClCompile Include="VanillaMain2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DoubleDigital.h" />
-    <ClInclude Include="Payoff1.h" />
-    <ClInclude Include="Payoff2.h" />
+    <ClInclude Include="Payoff3.h" />
     <ClInclude Include="PowerOption.h" />
     <ClInclude Include="Random1.h" />
-    <ClInclude Include="SimpleMC.h" />
-    <ClInclude Include="SimpleMC2.h" />
+    <ClInclude Include="SimpleMC4.h" />
+    <ClInclude Include="Vanilla2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
