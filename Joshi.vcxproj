@@ -60,21 +60,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DoubleDigital.cpp" />
     <ClCompile Include="Payoff3.cpp" />
-    <ClCompile Include="PowerOption.cpp" />
+    <ClCompile Include="PayoffBridge.cpp" />
     <ClCompile Include="Random1.cpp" />
     <ClCompile Include="SimpleMC4.cpp" />
-    <ClCompile Include="Vanilla2.cpp" />
-    <ClCompile Include="VanillaMain2.cpp" />
+    <ClCompile Include="Vanilla3.cpp" />
+    <ClCompile Include="VanillaMain3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DoubleDigital.h" />
     <ClInclude Include="Payoff3.h" />
-    <ClInclude Include="PowerOption.h" />
+    <ClInclude Include="PayoffBridge.h" />
     <ClInclude Include="Random1.h" />
     <ClInclude Include="SimpleMC4.h" />
-    <ClInclude Include="Vanilla2.h" />
+    <ClInclude Include="Vanilla3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

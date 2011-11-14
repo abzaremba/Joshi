@@ -5,12 +5,12 @@
 */
 
 #include "SimpleMC4.h"
-#include "Vanilla2.h"
+#include "Vanilla3.h"
 #include <iostream>
 
 using namespace std;
 
-int main_old2()
+int main()
 {
 	double Expiry;
 	double Strike;

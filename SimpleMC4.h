@@ -1,7 +1,7 @@
 #ifndef SIMPLEMC4_H
 #define SIMPLEMC4_H
 
-#include "Vanilla2.h"
+#include "Vanilla3.h"
 
 double SimpleMonteCarlo3(const VanillaOption& TheOption,
 						 double Spot,

@@ -18,22 +18,19 @@
     <ClCompile Include="Random1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DoubleDigital.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PowerOption.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Payoff3.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vanilla2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SimpleMC4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VanillaMain2.cpp">
+    <ClCompile Include="PayoffBridge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vanilla3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VanillaMain3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,19 +38,16 @@
     <ClInclude Include="Random1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DoubleDigital.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PowerOption.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Payoff3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vanilla2.h">
+    <ClInclude Include="SimpleMC4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleMC4.h">
+    <ClInclude Include="PayoffBridge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vanilla3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
